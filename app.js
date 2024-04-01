@@ -58,7 +58,7 @@ async function getUserBalance() {
     console.log("hafa");
     const _userBalance = await contract.methods.balanceOf(account).call();
     //const balance = userBalance/1000;
-    console.log(_userBalance);
+    console.log(_userBalance/1000000000000000000);
     //console.log(balance)
 
     document.getElementById("mlzybalance").textContent = _userBalance + " $MLZY";

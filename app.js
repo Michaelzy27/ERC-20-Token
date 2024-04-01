@@ -43,8 +43,10 @@ async function transfer() {
 
     const address = document.getElementById("walletaddress").value;
     const amount =  document.getElementById("walletamount").value;
+    const _decAmount = amount * 1000000000        //due to token decimal of 18
+    const _amount2 = _decAmount * 1000000000
 
-    await contract.methods.transfer(address, amount).send({from: account});
+    await contract.methods.transfer(address, _amount2).send({from: account});
 
 }
 
@@ -74,7 +76,7 @@ async function mintTokens() {
     const _amount2 = _decAmount * 1000000000
     
     try {
-        await contract.methods.mintTokens(_decAmount, account).send({from: account});
+        await contract.methods.mintTokens(_amount2, account).send({from: account});
     } catch(error) {
         console.log(error);
 

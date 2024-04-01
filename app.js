@@ -83,5 +83,6 @@ async function getTotalSupply() {
     }
 
     const supply = await contract.methods.totalSupply().call();
+    console.log(supply);
     document.getElementById("mlzysupply").textcontent = supply + " $MLZY";
 }

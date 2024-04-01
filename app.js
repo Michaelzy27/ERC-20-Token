@@ -6,7 +6,7 @@ function send() {
     document.getElementById("walletaddress").value = "00x"
 }
 
-//document.getElementById("connect").addEventListener("click", connectWallet);
+document.getElementById("connect").addEventListener("click", connectWallet);
 
 function connect() {
     document.getElementById("walletaddress").value = "65400x"

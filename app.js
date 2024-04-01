@@ -50,18 +50,19 @@ async function transfer() {
 
 async function getUserBalance() {
 
+    console.log("yhhh")
     if(contract == null) {
         console.error("Contract does not exist!");
         return;
     }
 
     console.log("hafa");
-    const userBalance = await contract.methods.balanceOf(account).call;
+    const _userBalance = await contract.methods.balanceOf(account).call;
     //const balance = userBalance/1000;
-    console.log(userBalance);
-    console.log(balance);
+    console.log(_userBalance);
+    //console.log(balance);
 
-    document.getElementById("mlzybalance").textContent = balance;
+    document.getElementById("mlzybalance").textContent = _userBalance;
 
 }
 

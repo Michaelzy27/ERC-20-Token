@@ -55,10 +55,12 @@ async function getUserBalance() {
         return;
     }
 
+    console.log("hafa");
     const userBalance = await contract.methods.balanceOf(account).call;
     const balance = userBalance/1000;
     console.log(userBalance);
-    console.log(balance)
+    console.log(balance);
+
     document.getElementById("mlzybalance").textContent = balance;
 
 }

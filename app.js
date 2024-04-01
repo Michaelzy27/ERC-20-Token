@@ -56,7 +56,8 @@ async function getUserBalance() {
     }
 
     const userBalance = await contract.methods.balanceOf(account).call;
-    document.getElementById("mlzybalance").textContent = userBalance;
+    const balance = userBalance/1000;
+    document.getElementById("mlzybalance").textContent = balance;
 
 }
 

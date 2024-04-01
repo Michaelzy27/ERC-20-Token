@@ -19,7 +19,6 @@ const ABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{
 const contractAddress = "0xa22D416b61384E231e3300aA23FC31ba2bB6D9A8";
 
 async function connectWallet() {
-    console.log("test");
         if(window.ethereum) {
             var web3 = new Web3(window.ethereum);
             await window.ethereum.send('eth_requestAccounts');
@@ -82,7 +81,8 @@ async function getTotalSupply() {
         return;
     }
 
-    const supply = await contract.methods.totalSupply().call();
-    console.log(supply);
-    document.getElementById("mlzysupply").textcontent = supply + " $MLZY";
+    const _supply = await contract.methods.totalSupply().call();
+    console.log(_supply);
+    document.getElementById("mlzysupplyy").textContent = _supply + " $MLZY";
+
 }

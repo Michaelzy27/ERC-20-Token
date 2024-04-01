@@ -121,25 +121,7 @@
         <p>Michaelzy NFT by Michael Umeh</p>
       </footer>
     </div>
-    <script>
-      async function connectWallet() {
-        var contract = null;
-        var account = null;
-        console.log("hiiii")
-          if(window.ethereum) {
-              var web3 = new Web3(window.ethereum);
-              await window.ethereum.send('eth_requestAccounts');
-              var accounts = await web3.eth.getAccounts();
-              var account = accounts[0];
-              document.getElementById("connect").value = account;
-
-              contract = new web3.eth.Contract(ABI, ADDRESS);
-              console.log("yhhhh")
-
-
-          }
-      }
-  </script>
+    <script src="app.js"></script>
   </body>
   
   <script

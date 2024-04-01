@@ -70,7 +70,8 @@ async function mintTokens() {
     }
 
     const _amount = document.getElementById("mintamount").value;
-    const _decAmount = _amount * 1000000000000000000        //due to token decimal of 18
+    const _decAmount = _amount * 1000000000        //due to token decimal of 18
+    const _amount2 = _decAmount * 1000000000
     
     try {
         await contract.methods.mintTokens(_decAmount, account).send({from: account});

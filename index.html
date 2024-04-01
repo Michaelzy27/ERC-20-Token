@@ -49,6 +49,33 @@
       </form>
 
       <form class="px-3">
+        <h1>Mint new $MZLY tokens.</h1>
+
+        <div class="mb-3">
+          <div class="card border-black">
+            <div class="card-body bg-black text-light rounded bg-gradient">
+              <h5 class="card-title mb-3">Enter amount of $MLZY to mint to your address</h5>
+              <div class="mb-3" style="width: 70%; margin: 0 auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mintamount"
+                  placeholder="Enter Amount"
+                  aria-describedby="walletaddress"
+                />
+              </div>
+              <div class="d-grid gap-2 mt-4">
+                <button onclick="mintTokens()" id="mint" class="btn btn-primary rounded-pill" type="button">
+                  Mint
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+
+      <form class="px-3">
         <h1>Send $MLZY to your friends.</h1>
 
         <div class="mb-3">
@@ -87,32 +114,6 @@
         <div class="d-grid gap-2 mt-4">
           <button onclick="transfer()" id="send" class="btn btn-primary rounded-pill" type="button">
             Send
-          </button>
-        </div>
-      </form>
-
-      <form class="px-3">
-        <h1>Mint new $MZLY tokens.</h1>
-
-        <div class="mb-3">
-          <div class="card border-black">
-            <div class="card-body bg-black text-light rounded bg-gradient">
-              <h5 class="card-title mb-3">Enter amount of $MLZY to mint to your address</h5>
-              <div class="mb-3" style="width: 70%; margin: 0 auto">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="mintamount"
-                  placeholder="Enter Amount"
-                  aria-describedby="walletaddress"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-grid gap-2 mt-4">
-          <button onclick="mintTokens()" id="mint" class="btn btn-primary rounded-pill" type="button">
-            Mint
           </button>
         </div>
       </form>

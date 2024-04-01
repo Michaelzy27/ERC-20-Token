@@ -57,11 +57,8 @@ async function getUserBalance() {
 
     console.log("hafa");
     const _userBalance = await contract.methods.balanceOf(account).call();
-    //const balance = userBalance/1000;
-    console.log(_userBalance/1000000000000000000);
-    //console.log(balance)
-
-    document.getElementById("mlzybalance").textContent = _userBalance + " $MLZY";
+    const _balance = _userBalance/1000000000000000000         //due to token decimal of 18, userBalance has to be divided by 10**18
+    document.getElementById("mlzybalance").textContent = _balance + " $MLZY";
 
 }
 
@@ -73,9 +70,10 @@ async function mintTokens() {
     }
 
     const _amount = document.getElementById("mintamount").value;
+    const _decAmount = _amount * 1000000000000000000        //due to token decimal of 18
     
     try {
-        await contract.methods.mintTokens(_amount, account).send({from: account});
+        await contract.methods.mintTokens(_decAmount, account).send({from: account});
     } catch(error) {
         console.log(error);
 

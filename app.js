@@ -61,7 +61,7 @@ async function getUserBalance() {
     console.log(_userBalance);
     //console.log(balance)
 
-    document.getElementById("mlzybalance").textContent = _userBalance;
+    document.getElementById("mlzybalance").textContent = _userBalance + "$MLZY";
 
 }
 

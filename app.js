@@ -28,9 +28,6 @@ async function connectWallet() {
             document.getElementById("connect").textContent = account;
 
             contract = new web3.eth.Contract(ABI, contractAddress);
-            console.log("testing")
-
-
         }
 }
 
@@ -57,7 +54,6 @@ async function getUserBalance() {
         return;
     }
 
-    console.log("hafa");
     const _userBalance = await contract.methods.balanceOf(account).call();
     const _balance = _userBalance/1000000000000000000         //due to token decimal of 18, userBalance has to be divided by 10**18
     document.getElementById("mlzybalance").textContent = _balance + " $MLZY";

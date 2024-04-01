@@ -57,7 +57,7 @@ async function getUserBalance() {
 
     console.log("hafa");
     const userBalance = await contract.methods.balanceOf(account).call;
-    const balance = userBalance/1000;
+    //const balance = userBalance/1000;
     console.log(userBalance);
     console.log(balance);
 

@@ -42,7 +42,7 @@ async function transfer() {
     }
 
     const address = document.getElementById("walletaddress").value;
-    const amount =  document.getElementById("wallet amount").value;
+    const amount =  document.getElementById("walletamount").value;
 
     await contract.methods.transfer(address, amount).send({from: account});
 

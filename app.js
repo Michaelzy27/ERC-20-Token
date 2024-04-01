@@ -74,3 +74,14 @@ async function mintTokens() {
     }
        
 }
+
+async function getTotalSupply() {
+
+    if(contract == null) {
+        console.error("Contract does not exist!");
+        return;
+    }
+
+    const supply = await contract.methods.totalSupply().call();
+    document.getElementById("mlzysupply").textcontent = supply + " $MLZY";
+}
